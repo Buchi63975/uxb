@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>個人用ポートフォリオ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Hero section -->
+    <div class="hero">
+      <nav>
+        <h2 class="logo">大渕<span>雄大</span></h2>
+        <ul>
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#about">About me</a></li>
+          <li><a href="#port">ポートフォリオ</a></li>
+        </ul>
+        <a href="#" class="btn">お問い合わせ</a>
+      </nav>
+
+      <div class="content">
+        <div class="body">
+          <div class="portfolioInfo">
+            <h1>大渕<span>雄大</span></h1>
+          </div>
+          <img src="./img/person.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="main">
+        <img src="./img/person.png" alt="" />
+        <div class="about-text">
+          <h2>About me</h2>
+          <h5>大渕雄大</h5>
+          <p>
+            2003年10月7日,アメリカ合衆国アイオワ州にて生まれる。その後日本に戻り神奈川県横浜市で育つ。<br />
+            2016年東京都市大学付属中学に進学。<br />
+            2018年アメリカ合衆国オレゴン州セイラムに一年間留学<br />
+            2021年東京都市大学付属高校を卒業<br />
+            2023年東洋大学情報連携学部情報連携学科に進学
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- service section start -->
+    <div class="service" id="port">
+      <div class="title">
+        <h2>ポートフォリオ</h2>
+      </div>
+
+      <div class="box">
+        <div class="card card-america">
+          <i class="fas fa-bars"> </i>
+          <h5>アメリカ留学</h5>
+          <div class="pra">
+            <p>
+              <a href="study-abroad.html" class="button">もっと読む</a>
+            </p>
+          </div>
+          <!-- スライドショーの画像 -->
+          <div class="slideshow-container">
+            <img src="img/IMG_0232.jpg" class="slide fade" />
+            <img src="img/IMG_0375.jpg" class="slide fade" />
+            <img src="img/IMG_0381.jpg" class="slide fade" />
+            <img src="img/IMG_0403.jpg" class="slide fade" />
+            <img src="img/IMG_0634.jpg" class="slide fade" />
+            <img src="img/IMG_1076.jpg" class="slide fade" />
+          </div>
+        </div>
+
+        <div class="card">
+          <i class="fas fa-bell"> </i>
+          <h5>赤羽台祭実行委員</h5>
+          <div class="pra">
+            <p>
+              <a href="#" class="button">もっと読む</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Me -->
+    <div class="contact">
+      <p>気になる方は私にお問い合わせください。</p>
+      <a href="#" class="button-two">お問い合わせ</a>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>Yuta Obuchi</p>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="end">CopyRight@YutaObuchi</p>
+    </footer>
+    <script>
+      document
+        .querySelector(".about img")
+        .addEventListener("click", function () {
+          // animateクラスを追加してアニメーションを開始
+          this.classList.add("animate");
+          // アニメーション終了後にクラスを削除（次回のために）
+          this.addEventListener(
+            "animationend",
+            () => {
+              this.classList.remove("animate");
+            },
+            { once: true }
+          );
+        });
+
+      let slideIndex = 0;
+
+      function showSlides() {
+        const slides = document.querySelectorAll(".slideshow-container .slide");
+        slides.forEach((slide, index) => {
+          slide.style.display = "none"; // 全て非表示
+        });
+
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1; // インデックスをリセット
+        }
+
+        // 現在のスライドを表示
+        slides[slideIndex - 1].style.display = "block";
+
+        // 3秒後に次のスライドへ
+        setTimeout(showSlides, 3000);
+      }
+
+      // スライドショーを初期化
+      showSlides();
+    </script>
+  </body>
+</html>
