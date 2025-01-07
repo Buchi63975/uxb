@@ -1,30 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>アメリカ留学体験 - 大渕雄大</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>アメリカ留学 - セイラム</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- 同じFont Awesomeのリンクを含める -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body>
-    <!-- 同じナビゲーションバーを含める -->
-    <nav>
-      <!-- 既存のナビゲーション内容 -->
-    </nav>
+    <!-- Header Section -->
+    <header class="study-header">
+      <img src="./img/IMG_2018.jpg" alt="セイラムの町" class="town-image" />
+      <div class="header-text">
+        <h1>アメリカ留学 - オレゴン州セイラム</h1>
+        <p>
+          セイラムはオレゴン州の州都であり、豊かな自然と穏やかな暮らしが魅力の町です。
+          アメリカ留学中、地元の文化や生活を深く体験しました。
+        </p>
+      </div>
+    </header>
 
-    <!-- 留学体験の詳細コンテンツ -->
-    <div class="study-abroad-content">
-      <h1>アメリカ留学体験</h1>
-      <p>2018年のオレゴン州セイラムでの留学体験について...</p>
-      <!-- 詳細な内容を追加 -->
-    </div>
+    <!-- Slideshow Section -->
+    <section class="slideshow-section">
+      <h2>留学中の写真</h2>
+      <div class="slideshow-container">
+        <img src="img/IMG_0232.jpg" class="slide fade" alt="留学写真1" />
+        <img src="img/IMG_0375.jpg" class="slide fade" alt="留学写真2" />
+        <img src="img/IMG_0381.jpg" class="slide fade" alt="留学写真3" />
+        <img src="img/IMG_0403.jpg" class="slide fade" alt="留学写真4" />
+        <img src="img/IMG_0634.jpg" class="slide fade" alt="留学写真5" />
+        <img src="img/IMG_1076.jpg" class="slide fade" alt="留学写真6" />
+      </div>
+    </section>
 
-    <!-- 同じフッターを含める -->
+    <!-- Footer -->
     <footer>
-      <!-- 既存のフッター内容 -->
+      <p>Yuta Obuchi</p>
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="end">CopyRight@YutaObuchi</p>
     </footer>
+
+    <script>
+      let slideIndex = 0;
+
+      function showSlides() {
+        const slides = document.querySelectorAll(".slideshow-container .slide");
+        slides.forEach((slide) => {
+          slide.style.display = "none"; // 全て非表示
+        });
+
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1; // インデックスをリセット
+        }
+
+        slides[slideIndex - 1].style.display = "block"; // 現在のスライドを表示
+        setTimeout(showSlides, 3000); // 3秒後に次のスライドへ
+      }
+
+      // スライドショーを初期化
+      showSlides();
+    </script>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #101010;
+        color: white;
+      }
+
+      .study-header {
+        position: relative;
+        text-align: center;
+        color: white;
+      }
+
+      .town-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .header-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .header-text h1 {
+        margin-bottom: 10px;
+        font-size: 32px;
+      }
+
+      .header-text p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .slideshow-section {
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .slideshow-section h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+
+      /* スライドショー全体のコンテナ */
+      .slideshow-container {
+        width: 100%; /* スライドショーをページ全幅に設定 */
+        max-height: 500px; /* 最大高さを設定 */
+        overflow: hidden; /* コンテナ外の画像を非表示にする */
+        position: relative;
+      }
+
+      .slide {
+        width: 100%; /* スライドの幅をコンテナに合わせる */
+        height: 100%; /* 高さを最大に設定 */
+        object-fit: contain; /* 画像全体が収まるように調整 */
+        display: none; /* 最初は非表示にする */
+        position: absolute; /* 各スライドを重ねる */
+        top: 0;
+        left: 0;
+      }
+      .slide:first-of-type {
+        display: block;
+      }
+
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #191919;
+      }
+
+      .social a {
+        margin: 0 10px;
+        color: white;
+        font-size: 20px;
+      }
+
+      .end {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+    </style>
   </body>
 </html>
