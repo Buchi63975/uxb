@@ -10,7 +10,7 @@
 }
 
 .hero {
-  background-image: url("img/IMG_2025.jpg"); /* 画像のパスを指定 */
+  background-image: url("../img/IMG_2025.jpg"); /* 画像のパスを指定 */
   background-size: cover; /* 背景画像を全体に表示 */
   background-position: center; /* 中央に配置 */
   background-repeat: no-repeat; /* 繰り返しなし */
@@ -272,7 +272,7 @@ button:hover {
 }
 
 .service {
-  background-image: url("img/IMG_2024.jpg"); /* 画像のパスを指定 */
+  background-image: url("../img/IMG_2024.jpg"); /* 画像のパスを指定 */
   background-size: cover; /* 背景画像を全体に表示 */
   background-position: center; /* 中央に配置 */
   background-repeat: no-repeat; /* 繰り返しなし */
@@ -380,7 +380,7 @@ h5 {
 
 /* 赤羽台祭実行委員のセクション背景を変更 */
 .card-fes {
-  background-image: url("img/IMG_2023.jpg"); /* アメリカ国旗のURL */
+  background-image: url("../img/IMG_2023.jpg"); /* アメリカ国旗のURL */
   background-size: cover; /* 背景画像を要素全体に表示 */
   background-position: center; /* 中央揃え */
   color: black; /* テキストを見やすくするため白に変更 */
