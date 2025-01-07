@@ -7,7 +7,14 @@
 .hero {
   height: 100vh;
   width: 100%;
-  background-color: #101010;
+}
+
+.hero {
+  background-image: url("img/IMG_2025.jpg"); /* 画像のパスを指定 */
+  background-size: cover; /* 背景画像を全体に表示 */
+  background-position: center; /* 中央に配置 */
+  background-repeat: no-repeat; /* 繰り返しなし */
+  height: 100vh; /* ビューポート全体の高さ */
 }
 
 nav {
@@ -260,9 +267,16 @@ button:hover {
 }
 
 .service {
-  background: #101010;
   width: 100%;
   padding: 100px 0px;
+}
+
+.service {
+  background-image: url("img/IMG_2024.jpg"); /* 画像のパスを指定 */
+  background-size: cover; /* 背景画像を全体に表示 */
+  background-position: center; /* 中央に配置 */
+  background-repeat: no-repeat; /* 繰り返しなし */
+  height: 100vh; /* ビューポート全体の高さ */
 }
 
 .title h2 {
@@ -362,6 +376,19 @@ h5 {
   background-size: cover; /* 背景画像を要素全体に表示 */
   background-position: center; /* 中央揃え */
   color: black; /* テキストを見やすくするため白に変更 */
+}
+
+/* 赤羽台祭実行委員のセクション背景を変更 */
+.card-fes {
+  background-image: url("img/IMG_2023.jpg"); /* アメリカ国旗のURL */
+  background-size: cover; /* 背景画像を要素全体に表示 */
+  background-position: center; /* 中央揃え */
+  color: black; /* テキストを見やすくするため白に変更 */
+}
+
+.card-fes h5 {
+  color: black; /* 文字色を白に設定 */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* テキストの視認性を向上させる影 */
 }
 
 .card-america h5 {
